@@ -1,0 +1,6 @@
+{
+  "name": "OCTACORE Fitness Nerul",
+  "description": "Premium modern gym in Nerul, Navi Mumbai. State-of-the-art equipment, HIIT, CrossFit, personal training, and expert coaches.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
