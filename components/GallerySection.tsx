@@ -14,13 +14,6 @@ interface GalleryItem {
 
 const GALLERY_ITEMS: GalleryItem[] = [
   {
-    id: 1,
-    src: '/images/hero_slide_3.jpg',
-    title: 'High-Tech Cardio & Equipment Floor',
-    category: 'Cardio',
-    description: 'Commercial orange-accented treadmills and elliptical line with shock-absorbent decks.',
-  },
-  {
     id: 2,
     src: '/images/hero_slide_1.jpg',
     title: 'Olympic Deadlift & Barbell Station',
@@ -48,30 +41,9 @@ const GALLERY_ITEMS: GalleryItem[] = [
     category: 'Studio',
     description: 'Certified coaches providing real-time form correction, bar path tracking, and encouragement.',
   },
-  {
-    id: 6,
-    src: '/images/gallery_aerobics.jpg',
-    title: 'Dynamic Aerobics & HIIT Studio',
-    category: 'Studio',
-    description: 'Spacious mirrored aerobics studio with vibrant ambient lighting and high-energy music.',
-  },
-  {
-    id: 7,
-    src: '/images/hero_slide_2.jpg',
-    title: 'Explosive Battle Ropes & MetCon',
-    category: 'Functional',
-    description: 'Heavy conditioning zone designed to boost EPOC afterburn and core stability.',
-  },
-  {
-    id: 8,
-    src: '/images/hero_slide_4.jpg',
-    title: 'The OCTACORE Community',
-    category: 'Studio',
-    description: 'Inspiring athletes achieving personal transformation goals together in Nerul.',
-  },
 ];
 
-const CATEGORIES = ['All', 'Strength', 'Cardio', 'Functional', 'Studio'] as const;
+const CATEGORIES = ['All', 'Strength', 'Functional', 'Studio'] as const;
 
 export default function GallerySection() {
   const [activeFilter, setActiveFilter] = useState<string>('All');

@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
-import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 interface HeroCarouselProps {
   onOpenPassModal?: () => void;
@@ -144,7 +143,7 @@ export default function HeroCarousel({ onOpenPassModal }: HeroCarouselProps) {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white leading-[0.95] text-balance mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)]"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white leading-[0.95] text-balance drop-shadow-[0_4px_20px_rgba(0,0,0,0.85)]"
           >
             {currentSlide.headline.split(' ').map((word, i) => {
               const isAccent = word.toUpperCase().includes(currentSlide.accentWord);
@@ -158,25 +157,6 @@ export default function HeroCarousel({ onOpenPassModal }: HeroCarouselProps) {
               );
             })}
           </motion.h1>
-
-          {/* Clean WhatsApp CTA Button */}
-          <motion.div
-            key={`cta-whatsapp-${currentSlide.id}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex items-center gap-4 pt-2"
-          >
-            <a
-              href="https://wa.me/919069819090?text=Hi%20OCTACORE%20Fitness%20Nerul%2C%20I%20want%20to%20know%20more%20about%20gym%20membership%20and%20claim%20my%20free%20trial%20pass."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 px-6 sm:px-8 py-3.5 sm:py-4 bg-[#25D366] hover:bg-[#20ba5a] text-black font-black text-sm sm:text-base uppercase tracking-wider rounded-xl transition-all shadow-[0_4px_24px_rgba(37,211,102,0.45)] hover:shadow-[0_6px_32px_rgba(37,211,102,0.65)] hover:scale-105 active:scale-95 cursor-pointer"
-            >
-              <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 fill-current" />
-              <span>WhatsApp Us Now</span>
-            </a>
-          </motion.div>
         </div>
       </div>
 
